@@ -15,6 +15,7 @@ namespace AwsomeDevEvents.API.Controllers
             _Dbcontext = context;
         }
         [HttpGet]
+
         public IActionResult GetAll() 
         {
             var devEvents = _dbContext.DevEvents.Where(d => d.IsDeleted).ToList();
